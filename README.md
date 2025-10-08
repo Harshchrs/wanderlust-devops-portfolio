@@ -40,16 +40,26 @@ docker compose up -d --build
 docker exec -it mongo mongoimport --db wanderlust --collection posts --file /data/sample_posts.json --jsonArray
 ```
 5. Access Application
-Frontend → http://localhost:5173
 
-Backend API → runs internally on port 5000.
-⚙️ Tech Stack
-• MERN Stack – base web app.
-• Docker & Compose – containerized microservices.
-• MongoDB & Redis – database and caching containers.
-• Kubernetes (upcoming) – orchestration & scaling.
-• Terraform (upcoming) – AWS infrastructure provisioning.
-• Jenkins, ArgoCD, Prometheus (planned) – CI/CD & monitoring.
-⭐ Acknowledgment
-Thanks to [Krishna Acharyaa](https://github.com/krishnaacharyaa/wanderlust) for the original base project. If you find my DevOps adaptation valuable, consider starring the repository — it helps support future stages like Kubernetes & Terraform.
+- **Frontend:** [http://localhost:5173](http://localhost:5173)  
+- **Backend API:** runs internally on port 5000
+
+---
+
+## ⚙️ Tech Stack
+
+- **MERN Stack** – base web app  
+- **Docker & Compose** – containerized microservices  
+- **MongoDB & Redis** – database and caching containers  
+- **Kubernetes (upcoming)** – orchestration & scaling  
+- **Terraform (upcoming)** – AWS infrastructure provisioning  
+- **Jenkins, ArgoCD, Prometheus (planned)** – CI/CD & monitoring  
+
+---
+
+## ⭐ Acknowledgment
+
+Thanks to **[Krishna Acharyaa](https://github.com/krishnaacharyaa/wanderlust)** for the original base project.  
+
+If you find my DevOps adaptation valuable, consider **starring the repository** — it helps support future stages like Kubernetes & Terraform.
 
