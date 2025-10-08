@@ -1,5 +1,5 @@
 Wanderlust: A MERN Stack DevOps Portfolio 🌍
-A modern travel blog application originally created by Krishna Acharyaa (Link to original repo if known) and re-engineered by me to demonstrate advanced DevOps proficiency, focusing on containerization and cloud-native deployment principles.
+A modern travel blog application originally created by Krishna Acharyaa https://github.com/krishnaacharyaa/wanderlust and re-engineered by me to demonstrate advanced DevOps proficiency, focusing on containerization and cloud-native deployment principles.
 
 🚀 My Goal: Structured DevOps Progression
 The primary purpose of this repository is to showcase my skills in transforming a functional application into a robust, scalable, and fully automated deployment target. The project uses structured Git branches to illustrate a clear progression through different cloud-native technologies:
