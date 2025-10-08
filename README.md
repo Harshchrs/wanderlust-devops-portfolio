@@ -1,51 +1,43 @@
-🌍 Wanderlust: A MERN Stack DevOps Portfolio
-A modern travel blog application originally created by Krishna Acharyaa and re-engineered by me to demonstrate advanced DevOps proficiency, focusing on containerization, orchestration, and cloud-native deployment principles.
-————————————————————————————————————————
-🚀 My Goal: Structured DevOps Progression
-This repository showcases a structured evolution from a basic MERN app to a fully automated, cloud-ready deployment pipeline. Each Git branch represents a clear stage in this DevOps journey:
+🌍 Wanderlust: A DevOps Portfolio Project
+A modern travel blog application originally created by [Krishna Acharyaa](https://github.com/krishnaacharyaa/wanderlust) and re-engineered by me to demonstrate advanced DevOps skills — containerization, orchestration, and infrastructure automation.
+🚀 Project Overview
+The goal is to take a simple MERN application and progressively transform it into a production-grade, cloud-native deployment — documenting each stage using separate Git branches.
 Branch	Status	Focus	Description
-main	✅ Base Code	Containerized Setup	Base MERN codebase configured with Docker Compose for instant local deployment.
-dockerized	✅ Complete	Containerization	Fully optimized Docker setup using multi-stage builds and minimal images.
-kubernetes	🏗️ Upcoming	Orchestration	Will demonstrate scalable deployment using Kubernetes YAMLs / Helm charts.
-terraform	🏗️ Upcoming	Infrastructure as Code (IaC)	Will showcase automated cloud provisioning via Terraform.
-————————————————————————————————————————
+main	✅ Complete	Containerized Setup	Base MERN app with Docker Compose.
+dockerized	✅ Complete	Containerization	Optimized multi-stage builds and minimal images.
+kubernetes	🕒 Upcoming	Orchestration	Will include scalable deployment with Kubernetes/Helm.
+terraform	🕒 Upcoming	Infrastructure as Code	Will include AWS provisioning and IaC workflows.
 🛠️ Local Setup (Docker Compose)
-This project requires only Docker and Docker Compose (v2) — no manual Node, MongoDB, or Redis installations.
-1️⃣ Clone the Repository
+Requirements: Docker and Docker Compose v2
+1. Clone Repository
+```bash
 git clone https://github.com/Harshchrs/wanderlust-devops-portfolio.git
 cd wanderlust-devops-portfolio
-2️⃣ Configure Environment Variables
+```
+2. Configure Environment Variables
+```bash
 cp backend/.env.sample backend/.env
 cp frontend/.env.sample frontend/.env.local
-3️⃣ Launch Services and Initialize Data
-A. Launch the Stack:
-
+```
+3. Launch Stack
+```bash
 docker compose up -d --build
-B. Initialize Sample Data:
-
+```
+4. Initialize Data
+```bash
 docker exec -it mongo mongoimport --db wanderlust --collection posts --file /data/sample_posts.json --jsonArray
-4️⃣ Access the Application
-Frontend: http://localhost:5173
-Backend API: http://localhost:5000
-————————————————————————————————————————
-⚙️ Technology Stack
-Component	Stack / Tool	My Focus
-Original Codebase	MERN Stack (Mongo, Express, React, Node)	Leveraged for DevOps experimentation
-Containerization	Docker & Docker Compose	Multi-service orchestration and optimized builds
-Database	MongoDB	Managed via persistent container volumes
-Caching	Redis	Integrated containerized caching solution
-————————————————————————————————————————
-🧭 Future Roadmap
-- [ ] Kubernetes deployment with Helm
-- [ ] Terraform-based cloud provisioning
-- [ ] CI/CD automation with GitHub Actions
-- [ ] Monitoring setup using Prometheus + Grafana
-————————————————————————————————————————
-⭐️ Show Your Support
-Huge thanks to Krishna Acharyaa for the original MERN foundation.
+```
+5. Access Application
+Frontend → http://localhost:5173
 
-If you find my DevOps structure and implementation approach valuable — please consider starring this repository. Your support motivates me to continue building the upcoming Kubernetes and Terraform stages.
-————————————————————————————————————————
-Author: Harsh Chaurasia
-📧 Connect on LinkedIn: https://www.linkedin.com/in/harshchrs/
-📂 Repository: https://github.com/Harshchrs/wanderlust-devops-portfolio
+Backend API → runs internally on port 5000.
+⚙️ Tech Stack
+• MERN Stack – base web app.
+• Docker & Compose – containerized microservices.
+• MongoDB & Redis – database and caching containers.
+• Kubernetes (upcoming) – orchestration & scaling.
+• Terraform (upcoming) – AWS infrastructure provisioning.
+• Jenkins, ArgoCD, Prometheus (planned) – CI/CD & monitoring.
+⭐ Acknowledgment
+Thanks to [Krishna Acharyaa](https://github.com/krishnaacharyaa/wanderlust) for the original base project. If you find my DevOps adaptation valuable, consider starring the repository — it helps support future stages like Kubernetes & Terraform.
+
