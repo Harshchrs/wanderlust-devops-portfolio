@@ -1,14 +1,26 @@
-🌍 Wanderlust: A DevOps Portfolio Project
-A modern travel blog application originally created by [Krishna Acharyaa](https://github.com/krishnaacharyaa/wanderlust) and re-engineered by me to demonstrate advanced DevOps skills — containerization, orchestration, and infrastructure automation.
-🚀 Project Overview
-The goal is to take a simple MERN application and progressively transform it into a production-grade, cloud-native deployment — documenting each stage using separate Git branches.
-Branch	Status	Focus	Description
-main	✅ Complete	Containerized Setup	Base MERN app with Docker Compose.
-dockerized	✅ Complete	Containerization	Optimized multi-stage builds and minimal images.
-kubernetes	🕒 Upcoming	Orchestration	Will include scalable deployment with Kubernetes/Helm.
-terraform	🕒 Upcoming	Infrastructure as Code	Will include AWS provisioning and IaC workflows.
-🛠️ Local Setup (Docker Compose)
-Requirements: Docker and Docker Compose v2
+# 🌍 Wanderlust: A DevOps Portfolio Project
+
+A modern travel blog application originally created by **[Krishna Acharyaa](https://github.com/krishnaacharyaa/wanderlust)** and re-engineered by me to demonstrate advanced DevOps skills—containerization, orchestration, and infrastructure automation.
+
+---
+
+## 🚀 Project Overview
+
+The goal is to take a simple MERN application and progressively transform it into a production-grade, cloud-native deployment, documenting each stage using separate Git branches.
+
+| Branch | Status | Focus | Description |
+| :--- | :--- | :--- | :--- |
+| `main` | ✅ Complete | Containerized Setup | Base MERN app integrated with Docker Compose. |
+| `dockerized` | ✅ Complete | Containerization | Optimized multi-stage builds and minimal images for services. |
+| `kubernetes` | 🕒 Upcoming | Orchestration | Will include scalable deployment with Kubernetes/Helm. |
+| `terraform` | 🕒 Upcoming | Infrastructure as Code | Will include AWS provisioning and IaC workflows. |
+
+---
+
+## 🛠️ Local Setup (Docker Compose)
+
+**Requirements:** Docker and Docker Compose v2. No need to install Node, MongoDB, or Redis locally.
+
 1. Clone Repository
 ```bash
 git clone https://github.com/Harshchrs/wanderlust-devops-portfolio.git
