@@ -15,30 +15,41 @@ Export to Sheets
 Your project requires only Docker and Docker Compose (V2) to be installed locally. All services (Backend, Frontend, MongoDB, Redis) are launched via containers, eliminating local dependency installations.
 
 1. Clone the Repository
+Clone the project and navigate into the directory.
+
 Bash
 
 git clone https://github.com/Harshchrs/wanderlust-devops-portfolio.git
 cd wanderlust-devops-portfolio
-2. Configure and Launch Services
-Environment Setup: Create the necessary configuration files.
+2. Configure Environment Variables
+Create the necessary local configuration files for both the Backend and Frontend services from the provided samples.
 
 Bash
 
 cp backend/.env.sample backend/.env
 cp frontend/.env.sample frontend/.env.local
-Launch Stack: Build and start all services in the background.
+3. Launch Services and Initialize Data
+Run the stack and then inject the required sample data into the MongoDB container.
+
+A. Launch Stack
+Build and start all services (Backend, Frontend, Mongo, Redis) in the background.
 
 Bash
 
 docker compose up -d --build
-Data Initialization: After the stack is running, initialize the database with sample data.
+B. Data Initialization
+After the stack is running, execute the mongoimport command inside the running container to populate the database.
 
 Bash
 
 # Execute mongoimport inside the running Mongo container
 docker exec -it mongo mongoimport --db wanderlust --collection posts --file /data/sample_posts.json --jsonArray
-3. Access the Application
+4. Access the Application
+The application is now fully running and initialized:
+
 Frontend: Access the UI at http://localhost:5173
+
+Backend API: Running internally on port 5000.
 
 ⚙️ Technology Stack
 Component	Stack/Tool	My Focus
