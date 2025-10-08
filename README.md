@@ -1,25 +1,30 @@
-Wanderlust: A MERN Stack DevOps Portfolio 🌍
-A modern travel blog application originally created by Krishna Acharyaa https://github.com/krishnaacharyaa/wanderlust and re-engineered by me to demonstrate advanced DevOps proficiency, focusing on containerization and cloud-native deployment principles.
+# Wanderlust: A MERN Stack DevOps Portfolio 🌍
 
-🚀 My Goal: Structured DevOps Progression
+A modern travel blog application originally created by **[Krishna Acharyaa](https://github.com/krishnaacharyaa/wanderlust)** and re-engineered by me to demonstrate advanced **DevOps proficiency**, focusing on containerization and cloud-native deployment principles.
+
+## 🚀 My Goal: Structured DevOps Progression
+
 The primary purpose of this repository is to showcase my skills in transforming a functional application into a robust, scalable, and fully automated deployment target. The project uses structured Git branches to illustrate a clear progression through different cloud-native technologies:
 
-Branch	Status	Focus	Description
-main	Base Code	Containerized Setup	This branch serves as the base MERN application codebase, already configured with Docker Compose for immediate local launch.
-dockerized	Complete	Containerization	Contains the comprehensive implementation of the Docker setup and optimization (multi-stage builds, minimal images).
-kubernetes	Upcoming	Orchestration	Will demonstrate scalable deployment using Kubernetes YAMLs/Helm.
-terraform	Upcoming	Infrastructure as Code (IaC)	Will demonstrate cloud resource provisioning and infrastructure management.
+| Branch | Status | Focus | Description |
+| :--- | :--- | :--- | :--- |
+| `main` | Base Code | **Containerized Setup** | This branch serves as the base MERN application codebase, already configured with **Docker Compose** for immediate local launch. |
+| `dockerized` | **Complete** | **Containerization** | Contains the comprehensive implementation of the Docker setup and optimization (multi-stage builds, minimal images). |
+| `kubernetes` | *Upcoming* | **Orchestration** | Will demonstrate scalable deployment using Kubernetes YAMLs/Helm. |
+| `terraform` | *Upcoming* | **Infrastructure as Code (IaC)** | Will demonstrate cloud resource provisioning and infrastructure management. |
 
-Export to Sheets
-🛠️ Local Setup (Docker Compose)
-Your project requires only Docker and Docker Compose (V2) to be installed locally. All services (Backend, Frontend, MongoDB, Redis) are launched via containers, eliminating local dependency installations.
+---
 
-1. Clone the Repository
+## 🛠️ Local Setup (Docker Compose)
+
+Your project requires **only Docker** and **Docker Compose (V2)** to be installed locally. All services (Backend, Frontend, MongoDB, Redis) are launched via containers, eliminating local dependency installations.
+
+### 1. Clone the Repository
+
 Clone the project and navigate into the directory.
 
-Bash
-
-git clone https://github.com/Harshchrs/wanderlust-devops-portfolio.git
+```bash
+git clone [https://github.com/Harshchrs/wanderlust-devops-portfolio.git](https://github.com/Harshchrs/wanderlust-devops-portfolio.git)
 cd wanderlust-devops-portfolio
 2. Configure Environment Variables
 Create the necessary local configuration files for both the Backend and Frontend services from the provided samples.
@@ -42,7 +47,6 @@ After the stack is running, execute the mongoimport command inside the running c
 
 Bash
 
-# Execute mongoimport inside the running Mongo container
 docker exec -it mongo mongoimport --db wanderlust --collection posts --file /data/sample_posts.json --jsonArray
 4. Access the Application
 The application is now fully running and initialized:
