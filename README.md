@@ -42,7 +42,7 @@ docker exec -it mongo mongoimport --db wanderlust --collection posts --file /dat
 5. Access Application
 
 - **Frontend:** [http://localhost:5173](http://localhost:5173)  
-- **Backend API:** runs internally on port 5000
+- **Backend API:** [http://localhost:5000](http://localhost:5000)
 
 ---
 
