@@ -1,61 +1,54 @@
-# Wanderlust DevOps Portfolio 🌍
+Wanderlust: A MERN Stack DevOps Portfolio 🌍
+A modern travel blog application originally created by Krishna Acharyaa (Link to original repo if known) and re-engineered by me to demonstrate advanced DevOps proficiency, focusing on containerization and cloud-native deployment principles.
 
-A modern travel blog application built on the **MERN Stack** (MongoDB, Express, React, Node.js) and re-engineered to demonstrate end-to-end DevOps skills, focusing on containerization and cloud-native deployment principles.
+🚀 My Goal: Structured DevOps Progression
+The primary purpose of this repository is to showcase my skills in transforming a functional application into a robust, scalable, and fully automated deployment target. The project uses structured Git branches to illustrate a clear progression through different cloud-native technologies:
 
----
+Branch	Status	Focus	Description
+main	Base Code	Containerized Setup	This branch serves as the base MERN application codebase, already configured with Docker Compose for immediate local launch.
+dockerized	Complete	Containerization	Contains the comprehensive implementation of the Docker setup and optimization (multi-stage builds, minimal images).
+kubernetes	Upcoming	Orchestration	Will demonstrate scalable deployment using Kubernetes YAMLs/Helm.
+terraform	Upcoming	Infrastructure as Code (IaC)	Will demonstrate cloud resource provisioning and infrastructure management.
 
-## 🚀 DevOps Showcase
+Export to Sheets
+🛠️ Local Setup (Docker Compose)
+Your project requires only Docker and Docker Compose (V2) to be installed locally. All services (Backend, Frontend, MongoDB, Redis) are launched via containers, eliminating local dependency installations.
 
-This project uses Git branches to illustrate a clear, structured progression through different cloud technologies:
+1. Clone the Repository
+Bash
 
-| Branch | Status | Focus | Key Files |
-| :--- | :--- | :--- | :--- |
-| `main` | Base Code | Clean MERN application codebase. | `package.json`, `backend/server.ts` |
-| `dockerized` | **Complete** | **Containerization** using Docker and Docker Compose for a consistent local environment. | `docker-compose.yml`, `backend/Dockerfile` |
-| `kubernetes` | *Upcoming* | Orchestration using Kubernetes for scalable, highly available deployment. | `*.yaml`, `Helm Charts` |
-| `terraform` | *Upcoming* | Infrastructure as Code (IaC) for deploying and managing cloud resources. | `*.tf` |
+git clone https://github.com/Harshchrs/wanderlust-devops-portfolio.git
+cd wanderlust-devops-portfolio
+2. Configure and Launch Services
+Environment Setup: Create the necessary configuration files.
 
----
+Bash
 
-## 🛠️ Local Setup (Dockerized)
+cp backend/.env.sample backend/.env
+cp frontend/.env.sample frontend/.env.local
+Launch Stack: Build and start all services in the background.
 
-To run the full application stack locally using the `dockerized` branch:
+Bash
 
-1.  **Clone the Repository:**
-    ```bash
-    git clone https://github.com/Harshchrs/wanderlust-devops-portfolio
-    cd wanderlust
-    ```
-2.  **Checkout the Docker Branch:**
-    ```bash
-    git switch dockerized
-    ```
-3.  **Configure Environment:** Create the necessary configuration files.
-    ```bash
-    cp backend/.env.sample backend/.env
-    cp frontend/.env.sample frontend/.env.local
-    ```
-4.  **Launch Services:**
-    ```bash
-    docker compose up -d --build
-    ```
-    * **Frontend:** Accessible at `http://localhost:5173`
-    * **Backend API:** Accessible at `http://localhost:5000`
+docker compose up -d --build
+Data Initialization: After the stack is running, initialize the database with sample data.
 
----
+Bash
 
-## ⚙️ Technology Stack
+# Execute mongoimport inside the running Mongo container
+docker exec -it mongo mongoimport --db wanderlust --collection posts --file /data/sample_posts.json --jsonArray
+3. Access the Application
+Frontend: Access the UI at http://localhost:5173
 
-| Component | Stack/Tool | Description |
-| :--- | :--- | :--- |
-| **Frontend** | React, TypeScript, Tailwind CSS | Modern, component-based UI. |
-| **Backend** | Node.js, Express.js, TypeScript | RESTful API server. |
-| **Database** | MongoDB | Persistent data storage. |
-| **Caching** | Redis | Session and caching management. |
-| **Containerization** | **Docker** & **Docker Compose** | Defines and manages the multi-service application environment. |
+⚙️ Technology Stack
+Component	Stack/Tool	My Focus
+Original Codebase	MERN Stack (React, Node, Mongo, Express)	Leveraged for DevOps practice.
+Containerization	Docker & Docker Compose	Implemented multi-service environment definition.
+Database	MongoDB	Managed via persistent container volumes.
+Caching	Redis	Integrated containerized caching solution.
 
----
+Export to Sheets
+⭐️ Show Your Support
+I extend gratitude to Krishna Acharyaa for the foundation MERN project.
 
-## ⭐️ Show Your Support
-
-If you find this project interesting, please consider starring the repository! It encourages me to keep building out the Kubernetes and Terraform stages.
+If you find my structural and technical contributions interesting, please consider starring the repository! Your support encourages me to keep building out the Kubernetes and Terraform stages.
